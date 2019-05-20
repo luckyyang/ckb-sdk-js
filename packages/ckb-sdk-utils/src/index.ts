@@ -1,11 +1,12 @@
-import { TextEncoder, TextDecoder } from 'util'
 import crypto from './crypto'
 
 export * from './address'
 
 export const { blake2b, bech32, blake160 } = crypto
+
 const textEncoder = new TextEncoder()
 const textDecoder = new TextDecoder()
+
 export const PERSONAL = textEncoder.encode('ckb-default-hash')
 
 export const hexToBytes = (rawhex: any) => {
